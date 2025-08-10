@@ -119,7 +119,7 @@ resource "oci_core_instance" "web" {
   # Server initialization: SSH key + automatic setup script
   metadata = {
     ssh_authorized_keys = var.public_ssh_key                                   # SSH access through bastion
-    user_data           = base64encode(file("userdata_web.sh")) # Script that installs/configures web server automatically (first boot cloud-init)
+    user_data           = base64encode(file("userdata_data.sh")) # Script that installs/configures web server automatically (first boot cloud-init)
   }
 
   display_name = "${var.web_name_prefix}-${count.index + 1}" # Names: web-1, web-2, etc.
