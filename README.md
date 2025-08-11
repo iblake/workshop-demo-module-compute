@@ -26,4 +26,4 @@ Creates the virtual machines (servers) for the application.
 
 - `main.tf`: Creates bastion and web servers
 - `variables.tf`: Server configuration options
-- `userdata_web.sh`: Automatic server setup script
+- `file/userdata_web.sh`: Automatic server setup script
